@@ -15,9 +15,10 @@ class opts(object):
         self.parser.add_argument('--dataset', default='jde', help='jde')
         self.parser.add_argument('--exp_id', default='default')
         self.parser.add_argument('--test', action='store_true')
-        self.parser.add_argument('--load_model',
-                                 default='/content/MCMOT/models/mcmot_last_track_resdcn_18.pth',
-                                 help='path to pretrained model')
+        self.parser.add_argument('--load_model', default='/content/MCMOT/models/mcmot_last_track_resdcn_18.pth', help='path to pretrained model')
+        #self.parser.add_argument('--load_model', default='/content/MCMOT/models/hrnetv2_w18_imagenet_pretrained.pth', help='path to pretrained model')
+        #self.parser.add_argument('--load_model', default='/content/MCMOT/models/hrnetv2_w32_imagenet_pretrained.pth', help='path to pretrained model')
+        #self.parser.add_argument('--load_model', default='/content/MCMOT/models/ctdet_coco_dla_2x.pth', help='path to pretrained model')
         self.parser.add_argument('--resume',
                                  action='store_true',
                                  help='resume an experiment. '
