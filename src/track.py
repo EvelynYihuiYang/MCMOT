@@ -313,7 +313,7 @@ def eval_seq(opt,
 
 
 def main(opt,
-         data_root='/data/MOT16/train',
+         data_root='/content/MCMOT/src/data/visdrone.train',
          det_root=None, seqs=('MOT16-05',),
          exp_name='demo',
          save_images=False,
