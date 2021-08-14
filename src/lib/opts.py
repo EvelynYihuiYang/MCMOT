@@ -16,9 +16,10 @@ class opts(object):
         self.parser.add_argument('--exp_id', default='default')
         self.parser.add_argument('--test', action='store_true')
         self.parser.add_argument('--load_model', default='/content/MCMOT/models/mcmot_last_track_resdcn_18.pth', help='path to pretrained model')
-        #self.parser.add_argument('--load_model', default='/content/MCMOT/models/hrnetv2_w18_imagenet_pretrained.pth', help='path to pretrained model')
-        #self.parser.add_argument('--load_model', default='/content/MCMOT/models/hrnetv2_w32_imagenet_pretrained.pth', help='path to pretrained model')
+        #self.parser.add_argument('--load_model', default='/content/MCMOT/models/mcmot_last_track_hrnet_18_deconv.pth', help='path to pretrained model')
+        #self.parser.add_argument('--load_model', default='/content/MCMOT/models/mcmot_last_track_resdcn_18_visdrone.pth', help='path to pretrained model')
         #self.parser.add_argument('--load_model', default='/content/MCMOT/models/ctdet_coco_dla_2x.pth', help='path to pretrained model')
+
         self.parser.add_argument('--resume',
                                  action='store_true',
                                  help='resume an experiment. '
@@ -184,7 +185,7 @@ class opts(object):
         # 输入的video文件路径
         self.parser.add_argument('--input-video',
                                  type=str,
-                                 default='/content/MCMOT/videos/fixed-side-of-road.mp4',
+                                 default='/content/drive/MyDrive/pretrained/5.21-5.37_Trim.mp4',
                                  help='path to the input video')
 
         # 输入的image目录
@@ -207,11 +208,11 @@ class opts(object):
         #                          default='../src/lib/cfg/visdrone.json',  # 'mcmot_det.json', 'visdrone.json'
         #                          help='load data from cfg')
         self.parser.add_argument('--data_cfg', type=str,
-                                 default='../src/lib/cfg/mcmot.json',  # mcmot.json, mcmot_det.json,
+                                 default='/content/MCMOT/src/lib/cfg/mot15.json',  # mcmot.json, mcmot_det.json,
                                  help='load data from cfg')
         self.parser.add_argument('--data_dir',
                                  type=str,
-                                 default='/mnt/diskb/even/dataset')
+                                 default='/content/MCMOT/src/data')
 
         # loss
         self.parser.add_argument('--mse_loss',  # default: false
