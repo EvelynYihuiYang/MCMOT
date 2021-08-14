@@ -185,7 +185,7 @@ class opts(object):
         # 输入的video文件路径
         self.parser.add_argument('--input-video',
                                  type=str,
-                                 default='/content/drive/MyDrive/pretrained/5.21-5.37_Trim.mp4',
+                                 default='/content/drive/MyDrive/pretrained/SEP.30V11_xvid_Trim.mp4', #/content/drive/MyDrive/pretrained/5.21-5.37_Trim.mp4 #/content/drive/MyDrive/pretrained/MOT16-03_cut.mp4 #/content/drive/MyDrive/pretrained/SEP.30V11_xvid_Trim.mp4
                                  help='path to the input video')
 
         # 输入的image目录
