@@ -10,7 +10,7 @@ import torch
 
 my_visible_devs = '0'  # '0, 3'  # 设置可运行GPU编号
 os.environ['CUDA_VISIBLE_DEVICES'] = my_visible_devs
-device = torch.device('cuda: 0' if torch.cuda.is_available() else 'cpu')
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 import cv2
 import shutil
@@ -168,7 +168,7 @@ def test_single(img_path, dev):
 
     # Load model and put to device
     net = create_model(arch='resdcn_18', heads=heads, head_conv=256)
-    model_path = '/mnt/diskb/even/MCMOT/exp/mot/default/mcmot_last_det_resdcn_18.pth'
+    model_path = '/content/MCMOT/models/mcmot_last_track_resdcn_18.pth'
     net = load_model(model=net, model_path=model_path)
     net = net.to(dev)
     net.eval()
